@@ -1,0 +1,11 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-manual:
+    uses: ./.github/workflows/manual.yml
+    with:
+      environment: production
