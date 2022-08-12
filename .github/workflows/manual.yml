@@ -21,8 +21,8 @@ jobs:
       name: ${{ inputs.environment }}
     steps:
       - run: |
-          echo "Log level: $LEVEL"
-          echo "Tags: $TAGS"
           echo "Environment: $ENVIRONMENT"
+          echo "NEXT_PUBLIC_ENV: $NEXT_PUBLIC_ENV"
         env:
           ENVIRONMENT: ${{ inputs.environment }}
+          NEXT_PUBLIC_ENV: ${{ secrets.NEXT_PUBLIC_ENV }}
